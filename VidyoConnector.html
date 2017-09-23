@@ -294,25 +294,29 @@ to hook up all of the events to elements. -->
 					<tr>
 						<td></td>
 						<td>
-							<button id="startBtn" disabled="disabled">Start</button>
-							<button id="stopBtn" disabled="disabled">Stop</button>
+							<button id="startBtn" disabled="disabled">Generate Transkrip</button>
+							<button id="stopBtn" disabled="disabled">Stop Generate</button>
+							<button type="button" onclick="alert('Transcript Saved!')">Download Transkript</button>
 						</td>
 					</tr>
-					<tr>
+					<tr style="display: none;>
 						<td></td>
 						<td>Current hypothesis: <span id="hypothesisDiv"></span></td>
 					</tr>
-					<tr>
+					<tr style="display: none;">
 						<td></td>
 						<td>
-							<textarea id="phraseDiv" style="width:500px;height:200px" style="display: none;"></textarea>
+							<textarea id="phraseDiv" style="width:500px;height:200px"></textarea>
+						</td>
+					</tr>
+					<tr style="display: none;">
+						<td></td>
+						<td>
+							<textarea id="demo" style="width:500px;height:200px"></textarea>
 						</td>
 					</tr>
 					<tr>
-						<td></td>
-						<td>
-							<textarea id="demo" style="width:500px;height:200px" style="display: none;"></textarea>
-						</td>
+						<textarea id="BSA" rows="6" cols="45" disabled></textarea>
 					</tr>
 					<!-- <tr> -->
 						<!-- <td></td> -->
@@ -325,10 +329,7 @@ to hook up all of the events to elements. -->
 						<td>Status: <span id="statusDiv"></span></td>
 					</tr>
 				</table>
-				<textarea id="BSA" rows="6" cols="45" disabled></textarea>
-				
 			</p>
-			<button type="button" onclick="alert('Transcript Saved!')">Save Text File</button>
 		</form>
 		<div id="messages">
 			<!-- All Vidyo-related messages will be inserted into these spans. -->
