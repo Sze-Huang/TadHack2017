@@ -16,6 +16,21 @@
 		invoke the VidyoConnector API. -->
 		<script src="VidyoConnector.js"></script>
 		<script type="text/javascript">
+			function download(filename, text) {
+				var pom = document.createElement('a');
+				pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
+
+				encodeURIComponent(text));
+				pom.setAttribute('download', filename);
+
+				pom.style.display = 'none';
+				document.body.appendChild(pom);
+
+				pom.click();
+
+				document.body.removeChild(pom);
+			}
+		
 			function onVidyoClientLoaded(status) {
 				console.log("Status: " + status.state + "Description: " + status.description);
 				switch (status.state) {
@@ -318,6 +333,13 @@ to hook up all of the events to elements. -->
 					<tr>
 						<td></td>
 						<td>
+							<form onsubmit="download(this['name'].value, this['text'].value)">
+								<input type="text" name="name" value="test.txt">
+								<textarea rows=6 cols=45 name="text"></textarea>
+								<input type="submit" value="Download">
+							</form>
+						
+						
 							<textarea id="BSA" rows="6" cols="45" disabled></textarea>
 						</td>
 						
