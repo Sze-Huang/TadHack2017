@@ -162,8 +162,8 @@ html, body {
 #options select{ display: inline-block; width:195px; margin: 5px; padding: 4px; }
 
 .logo {
-	margin:      20px;
-	width:       300px;
+	margin:      0px;
+	width:       150px;
 }
 .optionsVisibiliyButtonElements {
 	width:       30px;
