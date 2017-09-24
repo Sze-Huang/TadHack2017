@@ -158,7 +158,7 @@ function registerMessageEventListeners(vidyoConnector){
 
 // vidyoConnector.SendChatMessage(obj1);
 function sendMessage(msgTexT) {
-	vidyoConnector.SendChatMessage(msgTexT);
+	vidyoConnector.SendChatMessage("Hello WOr");
 }
 
 
