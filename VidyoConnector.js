@@ -157,7 +157,7 @@ function registerMessageEventListeners(vidyoConnector){
 
 // vidyoConnector.SendChatMessage(obj1);
 function sendMessage(msgTexT) {
-	vidyoConnector.SendChatMessage("lim " + msgTexT);
+	vidyoConnector.SendChatMessage("limR " + msgTexT);
 }
 
 
