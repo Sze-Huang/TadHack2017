@@ -543,6 +543,7 @@ to hook up all of the events to elements. -->
 						document.getElementById("demo").innerHTML = myJSON;
 						var obj1 = event.Result[Object.keys(event.Result)[1]];
 						document.getElementById("BSA").innerHTML += obj1 + '\n';
+						vidyoConnector.SendChatMessage(obj1);
                         UpdateRecognizedPhrase(JSON.stringify(event.Result, null, 3));
                         break;
                     case "SpeechDetailedPhraseEvent" :

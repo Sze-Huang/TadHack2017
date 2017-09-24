@@ -4,6 +4,7 @@ function ShowRenderer(vidyoConnector) {
     vidyoConnector.ShowViewAt("renderer", rndr.offsetLeft, rndr.offsetTop, rndr.offsetWidth, rndr.offsetHeight);
 }
 
+
 // Run StartVidyoConnector when the VidyoClient is successfully loaded
 function StartVidyoConnector(VC, webrtc) {
 
@@ -35,6 +36,7 @@ function StartVidyoConnector(VC, webrtc) {
         vidyoConnector = vc;
         ShowRenderer(vidyoConnector);
         parseUrlParameters(configParams);
+		registerMessageEventListeners(vidyoConnector);
         registerDeviceListeners(vidyoConnector, cameras, microphones, speakers);
         handleDeviceChange(vidyoConnector, cameras, microphones, speakers);
         handleParticipantChange(vidyoConnector);
@@ -67,11 +69,7 @@ function StartVidyoConnector(VC, webrtc) {
         console.error("CreateVidyoConnector Failed " + err);
     });
 	
-	$("#BSA").ready(function(){
 
-         var textArea = $('#BSA');
-         textArea.scrollTop( textArea[0].scrollHeight - textArea.height()   );
-    });
 
     // Handle the camera privacy button, toggle between show and hide.
     $("#cameraButton").click(function() {
@@ -143,6 +141,21 @@ function StartVidyoConnector(VC, webrtc) {
     }
 
 }
+
+function registerMessageEventListeners(vidyoConnector){
+	vidyoConnector.RegisterMessageEventListener({
+		onChatMessageReceived: function(participant, chatMessage) { 
+			// console.log(participant.name + "says:" + chatMessage)
+		}
+	}).then(function() {
+		console.log("RegisterMessageEventListener Success");
+	}).catch(function() {
+		console.err("RegisterMessageEventListener Failed");
+	});
+
+}
+
+// vidyoConnector.SendChatMessage(obj1);
 
 function registerDeviceListeners(vidyoConnector, cameras, microphones, speakers) {
     // Map the "None" option (whose value is 0) in the camera, microphone, and speaker drop-down menus to null since
