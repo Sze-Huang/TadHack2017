@@ -145,7 +145,7 @@ function StartVidyoConnector(VC, webrtc) {
 function registerMessageEventListeners(vidyoConnector){
 	vidyoConnector.RegisterMessageEventListener({
 		onChatMessageReceived: function(participant, chatMessage) { 
-			console.log(participant.name + "says:" + chatMessage)
+			console.log(participant.name + "says:" + chatMessage.body)
 		}
 	}).then(function() {
 		console.log("RegisterMessageEventListener Success");
@@ -158,7 +158,7 @@ function registerMessageEventListeners(vidyoConnector){
 // vidyoConnector.SendChatMessage(obj1);
 function sendMessage(msgTexT) {
 	console.log("limsm")
-	vidyoConnector.SendChatMessage("limR " + msgTexT);
+	vidyoConnector.SendChatMessage("limR testing 123");
 }
 
 
