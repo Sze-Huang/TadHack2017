@@ -146,7 +146,6 @@ function registerMessageEventListeners(vidyoConnector){
 	vidyoConnector.RegisterMessageEventListener({
 		onChatMessageReceived: function(participant, chatMessage) { 
 			document.getElementById("BSA").innerHTML +=  "REceive " + participant.name + " says: " + chatMessage.body + "\n";
-			
 			// console.log(participant.name + " says: " + chatMessage.body)
 		}
 	}).then(function() {
