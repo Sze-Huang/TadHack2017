@@ -3,10 +3,6 @@ function ShowRenderer(vidyoConnector) {
     var rndr = document.getElementById('renderer');
     vidyoConnector.ShowViewAt("renderer", rndr.offsetLeft, rndr.offsetTop, rndr.offsetWidth, rndr.offsetHeight);
 }
-function ScrollDown(vidyoConnector){
-	var textarea = document.getElementById('BSA');
-	textarea.scrollTop = textarea.scrollHeight;
-}
 
 // Run StartVidyoConnector when the VidyoClient is successfully loaded
 function StartVidyoConnector(VC, webrtc) {
@@ -69,6 +65,12 @@ function StartVidyoConnector(VC, webrtc) {
         }
     }).catch(function(err) {
         console.error("CreateVidyoConnector Failed " + err);
+    });
+	
+	$(document).ready(function(){
+
+         var textArea = $('#BSA');
+         textArea.scrollTop( textArea[0].scrollHeight - textArea.height()   );
     });
 
     // Handle the camera privacy button, toggle between show and hide.
