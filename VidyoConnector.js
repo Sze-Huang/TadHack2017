@@ -67,7 +67,7 @@ function StartVidyoConnector(VC, webrtc) {
         console.error("CreateVidyoConnector Failed " + err);
     });
 	
-	$(document).ready(function(){
+	$("#BSA").ready(function(){
 
          var textArea = $('#BSA');
          textArea.scrollTop( textArea[0].scrollHeight - textArea.height()   );
