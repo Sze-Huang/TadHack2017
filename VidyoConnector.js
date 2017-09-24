@@ -4,7 +4,8 @@ function ShowRenderer(vidyoConnector) {
     vidyoConnector.ShowViewAt("renderer", rndr.offsetLeft, rndr.offsetTop, rndr.offsetWidth, rndr.offsetHeight);
 }
 function ScrollDown(vidyoConnector){
-	document.getElementById("BSA").scrollTop = document.getElementById("BSA").scrollHeight ;
+	var textarea = document.getElementById('BSA');
+	textarea.scrollTop = textarea.scrollHeight;
 }
 
 // Run StartVidyoConnector when the VidyoClient is successfully loaded
