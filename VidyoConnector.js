@@ -145,7 +145,7 @@ function StartVidyoConnector(VC, webrtc) {
 function registerMessageEventListeners(vidyoConnector){
 	vidyoConnector.RegisterMessageEventListener({
 		onChatMessageReceived: function(participant, chatMessage) { 
-			// console.log(participant.name + "says:" + chatMessage)
+			console.log(participant.name + "says:" + chatMessage)
 		}
 	}).then(function() {
 		console.log("RegisterMessageEventListener Success");
