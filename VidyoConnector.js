@@ -3,6 +3,9 @@ function ShowRenderer(vidyoConnector) {
     var rndr = document.getElementById('renderer');
     vidyoConnector.ShowViewAt("renderer", rndr.offsetLeft, rndr.offsetTop, rndr.offsetWidth, rndr.offsetHeight);
 }
+function ScrollDown(vidyoConnector){
+	document.getElementById("BSA").scrollTop = document.getElementById("BSA").scrollHeight ;
+}
 
 // Run StartVidyoConnector when the VidyoClient is successfully loaded
 function StartVidyoConnector(VC, webrtc) {
