@@ -318,7 +318,9 @@ to hook up all of the events to elements. -->
 					<tr>
 						<td></td>
 						<td>
-							<textarea id="BSA" class ="textarea" rows="6" cols="45" disabled></textarea>
+							<textarea id="BSA" class="scroll-class" rows="6" cols="45" disabled>
+							
+							</textarea>
 						</td>
 						
 					</tr>
@@ -645,7 +647,11 @@ to hook up all of the events to elements. -->
         }
     </script>
 	
-	
+	<script type="text/javascript">
+	     var objDiv = $(".scroll-class");
+    	 var h = objDiv.get(0).scrollHeight;
+    	 objDiv.animate({scrollTop: h});
+    </script>
 	
 </body>
 </html>
