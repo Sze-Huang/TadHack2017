@@ -145,9 +145,9 @@ function StartVidyoConnector(VC, webrtc) {
 function registerMessageEventListeners(vidyoConnector){
 	vidyoConnector.RegisterMessageEventListener({
 		onChatMessageReceived: function(participant, chatMessage) { 
-			// document.getElementById("BSA").innerHTML +=  "REceive " + participant.name + " says: " + chatMessage.body + "\n";
-			var aaaa = getUrlParameterByName("BSA");
-			aaa.text = "abc";
+			document.getElementById("BSA") +=  "REceive " + participant.name + " says: " + chatMessage.body + "\n";
+			// var aaaa = getUrlParameterByName("BSA");
+			// aaa.text = "abc";
 			// console.log(participant.name + " says: " + chatMessage.body)
 		}
 	}).then(function() {
@@ -162,7 +162,7 @@ function registerMessageEventListeners(vidyoConnector){
 function sendMessage(msgTexT) {
 	// console.log("-------------------------------------------------------" + msgTexT);
 	vidyoConnector.SendChatMessage(msgTexT);
-	// document.getElementById("BSA").innerHTML += "SEnt " + displayName + " says: " + msgTexT + "\n"; -->
+	document.getElementById("BSA") += "SEnt " + displayName + " says: " + msgTexT + "\n"; -->
 }
 
 
