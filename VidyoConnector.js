@@ -161,11 +161,11 @@ function registerMessageEventListeners(vidyoConnector){
 // vidyoConnector.SendChatMessage(obj1);
 function sendMessage(msgTexT) {
 	// console.log("-------------------------------------------------------" + msgTexT);
-	var displayName = getUrlParameterByName("displayName");
+	var displayName = document.getElementById("displayName").value;
     
     
 	vidyoConnector.SendChatMessage(msgTexT);
-	document.getElementById("BSA").value += 'SEnt ' + $("#displayName").val(displayName) + ' says: ' + msgTexT + '\n'; 
+	document.getElementById("BSA").value += 'SEnt ' + displayName + ' says: ' + msgTexT + '\n'; 
 }
 
 
