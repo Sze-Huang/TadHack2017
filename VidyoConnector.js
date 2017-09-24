@@ -145,6 +145,7 @@ function StartVidyoConnector(VC, webrtc) {
 function registerMessageEventListeners(vidyoConnector){
 	vidyoConnector.RegisterMessageEventListener({
 		onChatMessageReceived: function(participant, chatMessage) { 
+		
 			console.log(participant.name + "says:" + chatMessage)
 		}
 	}).then(function() {
@@ -156,6 +157,10 @@ function registerMessageEventListeners(vidyoConnector){
 }
 
 // vidyoConnector.SendChatMessage(obj1);
+function sendMessage(msgTexT) {
+	vidyoConnector.SendChatMessage(msgTexT);
+}
+
 
 function registerDeviceListeners(vidyoConnector, cameras, microphones, speakers) {
     // Map the "None" option (whose value is 0) in the camera, microphone, and speaker drop-down menus to null since
