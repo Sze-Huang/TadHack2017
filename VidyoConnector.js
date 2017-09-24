@@ -162,7 +162,7 @@ function registerMessageEventListeners(vidyoConnector){
 function sendMessage(msgTexT) {
 	// console.log("-------------------------------------------------------" + msgTexT);
 	vidyoConnector.SendChatMessage(msgTexT);
-	document.getElementById("BSA").value += 'SEnt ' + displayName + ' says: ' + msgTexT + '\n'; 
+	document.getElementById("BSA").value += 'SEnt ' + document.getElementById("displayName").value + ' says: ' + msgTexT + '\n'; 
 }
 
 
