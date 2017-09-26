@@ -14,7 +14,7 @@
 # Video Call Transkript
 This is the hack we did during **Tadhack Global Kuala Lumpur 2017** at Digi Communication Headquater on 23-24 September 2017.
 ### Special thanks to:
-  #### Team Member
+  **Team Member**
   - @[Sze Huang](https://github.com/Sze-Huang)
   - @[Edwin](https://github.com/edwinchoo1231)
   - @[Bee San](https://github.com/bsan94)
