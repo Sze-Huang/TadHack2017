@@ -18,7 +18,7 @@ This is the hack we did during **Tadhack Global Kuala Lumpur 2017** at Digi Comm
   - @[Sze Huang](https://github.com/Sze-Huang)
   - @[Edwin](https://github.com/edwinchoo1231)
   - @[Bee San](https://github.com/bsan94)
-  - @Kok Sang 
+  - @[Kok Sang](https://github.com/KOKSANG) 
 
 ## Dependencies
 - Vidyo.io API
