@@ -4,6 +4,13 @@
   <img src="http://blog.tadhack.com/wpress/wp-content/uploads/2017/05/TADHack_Global_EMAIL_BANNER_3_green_v1.png">
 </p>
 
+#### Main Sponsors
+- Matrix
+- Vidyo.io
+- Apifonica
+- Temasys
+- Telestax
+
 # Video Call Transkript
 This is the hack we did during **Tadhack Global Kuala Lumpur 2017** at Digi Communication Headquater on 23-24 September 2017.
 ### Special thanks to:
